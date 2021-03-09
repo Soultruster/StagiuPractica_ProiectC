@@ -19,13 +19,13 @@ Instrument NR.1
 Sistematizare-3.Instrument cu coarde ciupite cu degetele
 Numar de identificare-4034B
 Nume-chitara 
-Cheie muzicala-?????????
+Cheie muzicala-Sol
 
 Instrument NR.2
 Sistematizare-3.Instrument cu coarde frecate cu un arcus
 Numar de identificare-5015B
 Nume-vioara
-Cheie muzicala-?????????
+Cheie muzicala-Sol
 
 
 
@@ -39,13 +39,13 @@ Instrument NR.1
 Sistematizare-3.Instrument cu coarde ciupite cu degetele
 Numar de identificare-4034B
 Nume-chitara
-Cheie muzicala-?????????
+Cheie muzicala-Sol
 
 Instrument NR.2
 Sistematizare-3.Instrument cu coarde frecate cu un arcus
 Numar de identificare-5015B
 Nume-vioara
-Cheie muzicala-?????????
+Cheie muzicala-Sol
 
 
 
@@ -60,7 +60,7 @@ Instrument NR.1
 Sistematizare-3.Instrument cu coarde ciupite cu degetele
 Numar de identificare-4034B
 Nume-chitara
-Cheie muzicala-?????????
+Cheie muzicala-Sol
 
 
 Album NR.4
@@ -73,7 +73,7 @@ Instrument NR.1
 Sistematizare-3.Instrument cu coarde ciupite cu degetele
 Numar de identificare-4034B
 Nume-chitara
-Cheie muzicala-?????????
+Cheie muzicala-Sol
 
 
 
@@ -87,7 +87,7 @@ Instrument NR.1
 Sistematizare-3.Instrument cu coarde ciupite cu degetele
 Numar de identificare-4034B
 Nume-chitara
-Cheie muzicala-?????????
+Cheie muzicala-Sol
 
 
 
@@ -119,13 +119,13 @@ Instrument NR.1
 Sistematizare-3.Instrument cu coarde ciupite cu degetele
 Numar de identificare-4034B
 Nume-chitara
-Cheie muzicala-?????????
+Cheie muzicala-Sol
 
 Instrument NR.2
 Sistematizare-4.Instrumente de suflat(aerofone)
 Numar de identificare-3189A
 Nume-flaut
-Cheie muzicala-?????????
+Cheie muzicala-Sol
 
 
 Album NR.2
@@ -139,13 +139,13 @@ Instrument NR.1
 Sistematizare-3.Instrument cu coarde ciupite cu degetele
 Numar identificare-4034B
 Nume-chitara
-Cheie muzicala-???????
+Cheie muzicala-Sol
 
 Instrument NR.2
 Sistematizare-Instrument cu clape
 Numar identificare-153C
 Nume-Pian
-Cheie muzicala-???????
+Cheie muzicala-Sol
 
 Album NR.3
 Cod album-121/04
@@ -158,13 +158,13 @@ Instrument NR.1
 Sistematizare-3.Instrument cu coarde ciupite cu degetele
 Numar identificare-1050B
 Nume-chitara
-Cheie muzicala-???????
+Cheie muzicala-Sol
 
 Instrument NR.2
 Sistematizare-2.Instrument de percutie
 Numar identificare-1001D
 Nume-tamburine
-Cheie muzicala-???????
+Cheie muzicala-Sol
 
 CNP-2050309095
 Nume complet-Bob Dylan
@@ -189,19 +189,19 @@ Instrument NR.1
 Sistematizare-1.Instrumente de percutie
 Numar identificare-1991E
 Nume-conga
-Cheie muzicala-???????
+Cheie muzicala-Sol
 
 Instrument NR.2
 Sistematizare-4.Instrumente de suflat
 Numar identificare-2101C
 Nume-flaut
-Cheie muzicala-???????
+Cheie muzicala-Sol
 
 Instrument NR.3
 Sistematizare-3.Instrument cu coarde ciupite cu degetele
 Numar identificare-1328B
 Nume-chitara acustica
-Cheie muzicala-???????
+Cheie muzicala-Sol
 
 
 
@@ -221,19 +221,19 @@ Instrument NR.1
 Sistematizare-1.Instrumente de percutie
 Numar identificare-1991E
 Nume-conga
-Cheie muzicala-???????
+Cheie muzicala-Sol
 
 Instrument NR.2
 Sistematizare-4.Instrumente de suflat
 Numar identificare-2101C
 Nume-flaut
-Cheie muzicala-???????
+Cheie muzicala-Sol
 
 Instrument NR.3
 Sistematizare-3.Instrument cu coarde ciupite cu degetele
 Numar identificare-1328B
 Nume-chitara acustica
-Cheie muzicala-???????
+Cheie muzicala-Sol
 
 
 
@@ -249,19 +249,18 @@ Instrument NR.1
 Sistematizare-1.Instrumente de percutie
 Numar identificare-1991E
 Nume-conga
-Cheie muzicala-???????
-
+Cheie muzicala-Sol
 Instrument NR.2
 Sistematizare-3.Instrument cu coarde ciupite cu degetele
 Numar identificare-766B
 Nume-harpa
-Cheie muzicala-???????
+Cheie muzicala-Sol
 
 Instrument NR.3
 Sistematizare-3.Instrument cu coarde ciupite cu degetele
 Numar identificare-1209B
 Nume-chitara acustica
-Cheie muzicala-???????
+Cheie muzicala-Sol
 
 
 
