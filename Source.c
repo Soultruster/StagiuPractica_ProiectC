@@ -2,7 +2,7 @@
 
 struct album
 {
-    int codAlbum;
+    char codAlbum;
     char titlu[20];
     char data[10];
     char copyWrite[20];
@@ -11,7 +11,7 @@ struct album
 
 struct instrument
 {
-    int numarIdentificare;
+    char numarIdentificare;
     char nume[20];
     char cheieMuzicala[10];
 };
@@ -19,8 +19,10 @@ struct instrument
 struct muzician
 {
     long long CNP;
+    char nume [50];
     char adresa[50];
     char numarTelefon[10];
     struct album albm[10];
     struct instrument instr[10];
+    char voce
 };
