@@ -24,7 +24,7 @@ struct muzician
     char numarTelefon[10];
     struct album albm[10];
     struct instrument instr[10];
-    char voce;
-    char compozitor ;
-    char gen_muuzica;
+    char voce[3];
+    char compozitor[3] ;
+    char gen_muuzica[50];
 };
