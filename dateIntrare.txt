@@ -1,1 +1,281 @@
+CNP-1020802030
+Nume complet-Tobi Fernandez
+Adresa-Romania,Cluj-Napoca,Strada Iasomiei,Nr.25
+Telefon contact-0745204036
+Instrumente-chitara acustica,flaut,vioara
+Voce-Da
+Compozitor-Da
+Gen muzica-Populara
+
+Albume inregistrate
+
+Album NR.1
+Cod album-601/03
+Titlu-Draga mea viata
+Data inregistrarii-20.05.2003
+Tip format-CD
+Instrumente folosite
+Instrument NR.1
+Sistematizare-3.Instrument cu coarde ciupite cu degetele
+Numar de identificare-4034B
+Nume-chitara 
+Cheie muzicala-?????????
+
+Instrument NR.2
+Sistematizare-3.Instrument cu coarde frecate cu un arcus
+Numar de identificare-5015B
+Nume-vioara
+Cheie muzicala-?????????
+
+
+
+Album NR.2
+Cod album-639/05
+Titlu-Trandafirii rosii
+Data inregistrarii-29.04.2005
+Tip format-CD
+Instrumente folosite
+Instrument NR.1
+Sistematizare-3.Instrument cu coarde ciupite cu degetele
+Numar de identificare-4034B
+Nume-chitara
+Cheie muzicala-?????????
+
+Instrument NR.2
+Sistematizare-3.Instrument cu coarde frecate cu un arcus
+Numar de identificare-5015B
+Nume-vioara
+Cheie muzicala-?????????
+
+
+
+
+Album NR.3
+Cod album-883/07
+Titlu-Mandra floare de tei
+Data inregistrarii-01.11.2007
+Tip format-CD
+Instrumente folosite
+Instrument NR.1
+Sistematizare-3.Instrument cu coarde ciupite cu degetele
+Numar de identificare-4034B
+Nume-chitara
+Cheie muzicala-?????????
+
+
+Album NR.4
+Cod album-1111/11
+Titlu-Floare de stepa
+Data inregistrarii-27.05.2011
+Tip format-DVD
+Instrumente folosite
+Instrument NR.1
+Sistematizare-3.Instrument cu coarde ciupite cu degetele
+Numar de identificare-4034B
+Nume-chitara
+Cheie muzicala-?????????
+
+
+
+Album NR.5
+Cod album-557/13
+Titlu-Floare albastra
+Data inregistrarii-27.05.2013
+Tip format-DVD
+Instrumente folosite
+Instrument NR.1
+Sistematizare-3.Instrument cu coarde ciupite cu degetele
+Numar de identificare-4034B
+Nume-chitara
+Cheie muzicala-?????????
+
+
+
+
+
+
+
+
+CNP-2050105105
+Nume complet-Joan Baez
+Adresa-SUA,New York City -State Island ,Strada Adams Street,Nr.26
+Telefon contact-202-555-0194
+Instrumente-chitara,tamburine,pian
+Voce-Da 
+Compozitor-Da
+Gen muzica-Folk,Folk Rock,Country Folk
+
+
+Albume inregistrate
+
+Album NR.1
+Cod album-4072/02
+Titlu-Diamonds and Rust
+Data inregistrarii-20.05.2002
+Tip format-CD,DVD,caseta audio
+
+Instrumente folosite
+Instrument NR.1
+Sistematizare-3.Instrument cu coarde ciupite cu degetele
+Numar de identificare-4034B
+Nume-chitara
+Cheie muzicala-?????????
+
+Instrument NR.2
+Sistematizare-4.Instrumente de suflat(aerofone)
+Numar de identificare-3189A
+Nume-flaut
+Cheie muzicala-?????????
+
+
+Album NR.2
+Cod album-312/03
+Titlu-Any Day Now
+Data inregistrarii-20.05.2003
+Tip format-CD,DVD,caseta audio
+
+Instrumente folosite
+Instrument NR.1
+Sistematizare-3.Instrument cu coarde ciupite cu degetele
+Numar identificare-4034B
+Nume-chitara
+Cheie muzicala-???????
+
+Instrument NR.2
+Sistematizare-Instrument cu clape
+Numar identificare-153C
+Nume-Pian
+Cheie muzicala-???????
+
+Album NR.3
+Cod album-121/04
+Titlu-One Day at a Time
+Data inregistrarii-05.06.2004
+Tip format-CD,DVD
+
+Instrumente folosite
+Instrument NR.1
+Sistematizare-3.Instrument cu coarde ciupite cu degetele
+Numar identificare-1050B
+Nume-chitara
+Cheie muzicala-???????
+
+Instrument NR.2
+Sistematizare-2.Instrument de percutie
+Numar identificare-1001D
+Nume-tamburine
+Cheie muzicala-???????
+
+CNP-2050309095
+Nume complet-Bob Dylan
+Adresa-SUA,Duluth-Minnesota,Strada 5th Ave S, Nr.24
+Telefon contact-970-438-1685
+Instrumente-chitara acustica,tobe,chitara bas,harpa,conga,flaut
+Voce-Da
+Compozitor-Da
+Gen muzica-Folk,blues,rock,gospel country,pop traditional,jazz vocal
+
+
+Albume inregistrate
+
+Album NR.1
+Cod album-4071/99
+Titlu-Desire
+Data inregistrarii-20.10.1999
+Tip format-CD,DVD,caseta audio
+
+Instrumente folosite
+Instrument NR.1
+Sistematizare-1.Instrumente de percutie
+Numar identificare-1991E
+Nume-conga
+Cheie muzicala-???????
+
+Instrument NR.2
+Sistematizare-4.Instrumente de suflat
+Numar identificare-2101C
+Nume-flaut
+Cheie muzicala-???????
+
+Instrument NR.3
+Sistematizare-3.Instrument cu coarde ciupite cu degetele
+Numar identificare-1328B
+Nume-chitara acustica
+Cheie muzicala-???????
+
+
+
+
+
+
+
+
+Album NR.2
+Cod album-521/00
+Titlu-Hard Rain
+Data inregistrarii-05.06.2000
+Tip format-CD,DVD,caseta audio
+
+Instrumente folosite
+Instrument NR.1
+Sistematizare-1.Instrumente de percutie
+Numar identificare-1991E
+Nume-conga
+Cheie muzicala-???????
+
+Instrument NR.2
+Sistematizare-4.Instrumente de suflat
+Numar identificare-2101C
+Nume-flaut
+Cheie muzicala-???????
+
+Instrument NR.3
+Sistematizare-3.Instrument cu coarde ciupite cu degetele
+Numar identificare-1328B
+Nume-chitara acustica
+Cheie muzicala-???????
+
+
+
+
+Album NR.3
+Cod album-4089/01
+Titlu-Infidels
+Data inregistrarii-08.05.2001
+Tip format-CD,DVD,caseta audio
+
+Instrumente folosite
+Instrument NR.1
+Sistematizare-1.Instrumente de percutie
+Numar identificare-1991E
+Nume-conga
+Cheie muzicala-???????
+
+Instrument NR.2
+Sistematizare-3.Instrument cu coarde ciupite cu degetele
+Numar identificare-766B
+Nume-harpa
+Cheie muzicala-???????
+
+Instrument NR.3
+Sistematizare-3.Instrument cu coarde ciupite cu degetele
+Numar identificare-1209B
+Nume-chitara acustica
+Cheie muzicala-???????
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
