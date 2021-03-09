@@ -20,7 +20,7 @@ struct muzician
 {
     long long CNP;
     char adresa[50];
-    long numarTelefon;
+    char numarTelefon[10];
     struct album albm[10];
     struct instrument instr[10];
 };
