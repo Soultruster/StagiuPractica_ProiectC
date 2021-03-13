@@ -1,0 +1,22 @@
+5010202456837
+Tobi Fernandez
+Romania,Cluj-Napoca,Strada Iasomiei,Nr.25
+0745204036
+chitara,vioara
+4034B
+chitara
+Sol
+5015B
+vioara
+Sol
+601/03,639/05
+
+5010202476837
+Joan Baez
+Romania,Suecava,Strada Iasomiei,Nr.15
+0745204345
+pian
+4999B
+pian
+Do
+601/03,883/07
