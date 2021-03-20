@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 struct instrument
 {
@@ -19,15 +20,14 @@ struct album
 
 struct muzician
 {
-    char CNP[14];
+    char CNP[30];
     char nume [50];
     char adresa[50];
-    char numarTelefon[10];
-    struct album albm[10];
+    char numarTelefon[20];
+    int numarInstrumente;
+    struct album albm[20];
     struct instrument instr[10];
-    char voce[3];
-    char compozitor[3] ;
-    char gen_muuzica[50];
+    int numarAlbume;
 };
 
 
@@ -61,12 +61,10 @@ int main()
         }
     }
 
-                   /*for (j=1;j<=m;j++)
-                        printf("%s\n%s\n%s\n%s\n",albume[j].codAlbum,albume[j].titlu,albume[j].data,albume[j].format);
-                    printf("%s",albume[3].titlu); */
 
     int i=0,n=0,nr;  // n = numarul muzicienilor cititi / i = linia care se citeste
     //char linie[60];  // in linie se stocheaza toate caracterele de pe linia citita
+    int ct=0;
 
     while(fgets(linie,sizeof(linie),inM)){
         i++;
@@ -89,38 +87,71 @@ int main()
                 if(linie[k]==',')
                     nr++;
             }
+            muzicieni[n].numarInstrumente=nr+1;
         }
         else if(i>5){
-            for (int k=1;k<nr;k++){
+
+
+            for (int k=1;k<=nr+1;k++){
                 strcpy(muzicieni[n].instr[k].numarIdentificare,linie);
                 fgets(linie,sizeof(linie),inM);
                 strcpy(muzicieni[n].instr[k].nume,linie);
                 fgets(linie,sizeof(linie),inM);
                 strcpy(muzicieni[n].instr[k].cheieMuzicala,linie);
+                fgets(linie,sizeof(linie),inM);
             }
 
-            fgets(linie,sizeof(linie),inM);  //linia corespunzatoare albumelor
+            //linia corespunzatoare albumelor
 
-
-           /* inc=0,sf=0;
-            for (int k=0;k<strlen(linie);k++)
-                if(k==','){
-                    sf
+            ct=0;
+            int nral;
+            nral=0;
+            while(linie[ct]>='0' && linie[ct]<='9'){
+                nral++;
+                char codA[10]="",ch;
+                while(linie[ct]!=',' && linie[ct]!=NULL){
+                    ch=linie[ct];
+                    strncat(codA,&ch,1);
+                    ct++;
                 }
-                */
+                ct++;
+                for(j=1;j<=m;j++)
+                    if(strncmp (codA,albume[j].codAlbum,6)==0){
+                        muzicieni[n].albm[nral]=albume[j];
+                    }
 
-
+            }
+            muzicieni[n].numarAlbume=nral;
             i=-1;
         }
 
-
-
     }
-
-
-
-
+    printf("\n\n\n");
+    for (i=1;i<=n;i++){
+        printf("Muzician %d :\n",i);
+        printf("CNP : %s",muzicieni[i].CNP);
+        printf("Adresa :%s",muzicieni[i].adresa);
+        printf("Numar telefon :%s",muzicieni[i].numarTelefon);
+        printf("Nume :%s",muzicieni[i].nume);
+        printf("\nInstrumente folosite de muzician :\n");
+        for(j=1;j<=muzicieni[i].numarInstrumente;j++){
+            printf("%d.\n",j);
+            printf("    Numar identificare instrument :%s",muzicieni[i].instr[j].numarIdentificare);
+            printf("    Nume instrument :%s",muzicieni[i].instr[j].nume);
+            printf("    Cheie muzicala :%s",muzicieni[i].instr[j].cheieMuzicala);
+        }
+        printf("\nAlbume scoase de muzician :\n");
+        for(j=1;j<=muzicieni[i].numarAlbume;j++){
+            printf("%d.\n",j);
+            printf("-Cod album : %s",muzicieni[i].albm[j].codAlbum);
+            printf("-Titlu : %s",muzicieni[i].albm[j].titlu);
+            printf("-Data lansarii : %s",muzicieni[i].albm[j].data);
+            printf("-Format : %s",muzicieni[i].albm[j].format);
+        }
+        printf("-----------------------------------\n");
+    }
     fclose(inA);
     fclose(inM);
     return 0;
 }
+
