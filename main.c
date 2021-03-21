@@ -12,7 +12,7 @@ struct instrument
 struct album
 {
     char codAlbum[20];
-    char titlu[40];
+    char titlu[70];
     char data[12];
     char copyWrite[20];
     char format[20];
@@ -33,7 +33,7 @@ struct muzician
 int meniu(){
      int alegere;
      printf("Selectati ce doriti sa afiseze programul :\n");
-     printf("1 : Albumele scoase de un anumit muzician\n2 : Numarul albumelor aparute intr-un anumit an\n3 : Albumele inregistrate pe un anumit format\n");
+     printf("1 : Albumele scoase de un anumit muzician\n2 : Numarul albumelor aparute intr-un anumit an\n3 : Albumele inregistrate pe un anumit format\n4 : Toate datele\n");
      scanf("%d",&alegere);
      printf("\n");
      return alegere;
@@ -69,6 +69,9 @@ void cerinta3(struct album albume[],int m){
     char alegere[10];
     int nr=0;
     scanf("%s",alegere);
+    if(alegere!="CD" || alegere!="LP"){
+        printf("Nu ati introdus un format valid");
+        return;}
     printf("\n");
     for (int i=1;i<=m;i++){
         if (strncmp(albume[i].format,alegere,2)==0)
@@ -209,6 +212,8 @@ int main()
         cerinta2(albume,m);
     else if(a1==3)
         cerinta3(albume,m);
+    else if(a1==4)
+        afisare_date(muzicieni,n);
 
 
     fclose(inA);
