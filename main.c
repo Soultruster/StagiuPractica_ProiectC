@@ -13,7 +13,7 @@ struct album
 {
     char codAlbum[20];
     char titlu[40];
-    char data[10];
+    char data[12];
     char copyWrite[20];
     char format[20];
 };
@@ -30,6 +30,81 @@ struct muzician
     int numarAlbume;
 };
 
+int meniu(){
+     int alegere;
+     printf("Selectati ce doriti sa afiseze programul :\n");
+     printf("1 : Albumele scoase de un anumit muzician\n2 : Numarul albumelor aparute intr-un anumit an\n3 : Albumele inregistrate pe un anumit format\n");
+     scanf("%d",&alegere);
+     printf("\n");
+     return alegere;
+}
+
+void cerinta1(struct muzician muzicieni[],int n){
+    printf("Alegeti un muzician :\n");
+    int alegere;
+    for(int i=1;i<=n;i++){
+        printf("%d : %s",i,muzicieni[i].nume);
+    }
+    scanf("%d",&alegere);
+    printf("\nAlbume scoase de %s\n",muzicieni[alegere].nume);
+    for (int j=1;j<=muzicieni[alegere].numarAlbume;j++)
+        printf(" - %s",muzicieni[alegere].albm[j].titlu);
+}
+
+void cerinta2(struct album albume[],int m){
+    printf("Alegeti un an:\n");
+    char alegere[5];
+    int nr=0;
+    scanf("%s",alegere);
+    printf("\n");
+    for (int i=1;i<=m;i++){
+        if(alegere[0]==albume[i].data[6] &&alegere[1]==albume[i].data[7] && alegere[2]==albume[i].data[8] && alegere[3]==albume[i].data[9] )
+            nr++;
+    }
+    printf("In anul %s au iesit %d albume",alegere,nr);
+
+}
+void cerinta3(struct album albume[],int m){
+    printf("Alegeti un format (CD/LP):\n");
+    char alegere[10];
+    int nr=0;
+    scanf("%s",alegere);
+    printf("\n");
+    for (int i=1;i<=m;i++){
+        if (strncmp(albume[i].format,alegere,2)==0)
+            printf("-%s",albume[i].titlu),nr++;
+    }
+    if(nr==0)
+        printf("Ne pare rau ,nu exista albume inregistrate pe acest format\n");
+}
+
+void afisare_date(struct muzician muzicieni[],int n)
+{
+    printf("\n\n\n");
+    for (int i=1;i<=n;i++){
+        printf("Muzician %d :\n",i);
+        printf("CNP : %s",muzicieni[i].CNP);
+        printf("Adresa :%s",muzicieni[i].adresa);
+        printf("Numar telefon :%s",muzicieni[i].numarTelefon);
+        printf("Nume :%s",muzicieni[i].nume);
+        printf("\nInstrumente folosite de muzician :\n");
+        for(int j=1;j<=muzicieni[i].numarInstrumente;j++){
+            printf("%d.\n",j);
+            printf("    Numar identificare instrument :%s",muzicieni[i].instr[j].numarIdentificare);
+            printf("    Nume instrument :%s",muzicieni[i].instr[j].nume);
+            printf("    Cheie muzicala :%s",muzicieni[i].instr[j].cheieMuzicala);
+        }
+        printf("\nAlbume scoase de muzician :\n");
+        for(int j=1;j<=muzicieni[i].numarAlbume;j++){
+            printf("%d.\n",j);
+            printf("-Cod album : %s",muzicieni[i].albm[j].codAlbum);
+            printf("-Titlu : %s",muzicieni[i].albm[j].titlu);
+            printf("-Data lansarii : %s",muzicieni[i].albm[j].data);
+            printf("-Format : %s",muzicieni[i].albm[j].format);
+        }
+        printf("-----------------------------------\n");
+    }
+}
 
 int main()
 {
@@ -126,32 +201,17 @@ int main()
         }
 
     }
-    printf("\n\n\n");
-    for (i=1;i<=n;i++){
-        printf("Muzician %d :\n",i);
-        printf("CNP : %s",muzicieni[i].CNP);
-        printf("Adresa :%s",muzicieni[i].adresa);
-        printf("Numar telefon :%s",muzicieni[i].numarTelefon);
-        printf("Nume :%s",muzicieni[i].nume);
-        printf("\nInstrumente folosite de muzician :\n");
-        for(j=1;j<=muzicieni[i].numarInstrumente;j++){
-            printf("%d.\n",j);
-            printf("    Numar identificare instrument :%s",muzicieni[i].instr[j].numarIdentificare);
-            printf("    Nume instrument :%s",muzicieni[i].instr[j].nume);
-            printf("    Cheie muzicala :%s",muzicieni[i].instr[j].cheieMuzicala);
-        }
-        printf("\nAlbume scoase de muzician :\n");
-        for(j=1;j<=muzicieni[i].numarAlbume;j++){
-            printf("%d.\n",j);
-            printf("-Cod album : %s",muzicieni[i].albm[j].codAlbum);
-            printf("-Titlu : %s",muzicieni[i].albm[j].titlu);
-            printf("-Data lansarii : %s",muzicieni[i].albm[j].data);
-            printf("-Format : %s",muzicieni[i].albm[j].format);
-        }
-        printf("-----------------------------------\n");
-    }
+
+    int a1=meniu();
+    if(a1==1)
+        cerinta1(muzicieni,n);
+    else if(a1==2)
+        cerinta2(albume,m);
+    else if(a1==3)
+        cerinta3(albume,m);
+
+
     fclose(inA);
     fclose(inM);
     return 0;
 }
-
