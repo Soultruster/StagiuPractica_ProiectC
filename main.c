@@ -39,19 +39,20 @@ int meniu(){
      return alegere;
 }
 
-void cerinta1(struct muzician muzicieni[],int n){
+void cerinta1(struct muzician muzicieni[],int n,FILE *p){
     printf("Alegeti un muzician :\n");
     int alegere;
     for(int i=1;i<=n;i++){
         printf("%d : %s",i,muzicieni[i].nume);
     }
     scanf("%d",&alegere);
-    printf("\nAlbume scoase de %s\n",muzicieni[alegere].nume);
+    fprintf(p,"\nAlbume scoase de %s\n",muzicieni[alegere].nume);
     for (int j=1;j<=muzicieni[alegere].numarAlbume;j++)
-        printf(" - %s",muzicieni[alegere].albm[j].titlu);
+        fprintf(p," - %s",muzicieni[alegere].albm[j].titlu);
+        fprintf(p,"\n");
 }
 
-void cerinta2(struct album albume[],int m){
+void cerinta2(struct album albume[],int m,FILE *p){
     printf("Alegeti un an:\n");
     char alegere[5];
     int nr=0;
@@ -61,51 +62,53 @@ void cerinta2(struct album albume[],int m){
         if(alegere[0]==albume[i].data[6] &&alegere[1]==albume[i].data[7] && alegere[2]==albume[i].data[8] && alegere[3]==albume[i].data[9] )
             nr++;
     }
-    printf("In anul %s au iesit %d albume",alegere,nr);
+    fprintf(p,"In anul %s au iesit %d albume",alegere,nr);
+    fprintf(p,"\n");
 
 }
-void cerinta3(struct album albume[],int m){
-    printf("Alegeti un format (CD/LP):\n");
+void cerinta3(struct album albume[],int m,FILE *p){
+    printf("Alegeti un format (CD/DVD):\n");
     char alegere[10];
     int nr=0;
     scanf("%s",alegere);
-    if(alegere!="CD" || alegere!="LP"){
+    if(strcmp(alegere,"CD")!=0 && strcmp(alegere,"DVD")!=0){
         printf("Nu ati introdus un format valid");
         return;}
     printf("\n");
     for (int i=1;i<=m;i++){
         if (strncmp(albume[i].format,alegere,2)==0)
-            printf("-%s",albume[i].titlu),nr++;
+            fprintf(p,"-%s",albume[i].titlu),nr++;
     }
     if(nr==0)
         printf("Ne pare rau ,nu exista albume inregistrate pe acest format\n");
 }
 
-void afisare_date(struct muzician muzicieni[],int n)
+void afisare_date(struct muzician muzicieni[],int n,FILE *p)
 {
     printf("\n\n\n");
     for (int i=1;i<=n;i++){
-        printf("Muzician %d :\n",i);
-        printf("CNP : %s",muzicieni[i].CNP);
-        printf("Adresa :%s",muzicieni[i].adresa);
-        printf("Numar telefon :%s",muzicieni[i].numarTelefon);
-        printf("Nume :%s",muzicieni[i].nume);
-        printf("\nInstrumente folosite de muzician :\n");
+        fprintf(p,"Muzician %d :\n",i);
+        fprintf(p,"CNP : %s",muzicieni[i].CNP);
+        fprintf(p,"Adresa :%s",muzicieni[i].adresa);
+        fprintf(p,"Numar telefon :%s",muzicieni[i].numarTelefon);
+        fprintf(p,"Nume :%s",muzicieni[i].nume);
+        fprintf(p,"\nInstrumente folosite de muzician :\n");
         for(int j=1;j<=muzicieni[i].numarInstrumente;j++){
-            printf("%d.\n",j);
-            printf("    Numar identificare instrument :%s",muzicieni[i].instr[j].numarIdentificare);
-            printf("    Nume instrument :%s",muzicieni[i].instr[j].nume);
-            printf("    Cheie muzicala :%s",muzicieni[i].instr[j].cheieMuzicala);
+            fprintf(p,"%d.\n",j);
+            fprintf(p,"    Numar identificare instrument :%s",muzicieni[i].instr[j].numarIdentificare);
+            fprintf(p,"    Nume instrument :%s",muzicieni[i].instr[j].nume);
+            fprintf(p,"    Cheie muzicala :%s",muzicieni[i].instr[j].cheieMuzicala);
         }
-        printf("\nAlbume scoase de muzician :\n");
+        fprintf(p,"\n");
+        fprintf(p,"\nAlbume scoase de muzician :\n");
         for(int j=1;j<=muzicieni[i].numarAlbume;j++){
-            printf("%d.\n",j);
-            printf("-Cod album : %s",muzicieni[i].albm[j].codAlbum);
-            printf("-Titlu : %s",muzicieni[i].albm[j].titlu);
-            printf("-Data lansarii : %s",muzicieni[i].albm[j].data);
-            printf("-Format : %s",muzicieni[i].albm[j].format);
+            fprintf(p,"%d.\n",j);
+            fprintf(p,"-Cod album : %s",muzicieni[i].albm[j].codAlbum);
+            fprintf(p,"-Titlu : %s",muzicieni[i].albm[j].titlu);
+            fprintf(p,"-Data lansarii : %s",muzicieni[i].albm[j].data);
+            fprintf(p,"-Format : %s",muzicieni[i].albm[j].format);
         }
-        printf("-----------------------------------\n");
+        fprintf(p,"-----------------------------------\n");
     }
 }
 
@@ -119,7 +122,7 @@ int main()
     struct album albume[200];
 
     int j=0,m=0;  // m = numarul albumelor citite / j = linia care se citeste
-    char linie[60];  // in linie se stocheaza toate caracterele de pe linia citita
+    char linie[160];  // in linie se stocheaza toate caracterele de pe linia citita
 
     while(fgets(linie,sizeof(linie),inA)){
         j++;
@@ -206,17 +209,31 @@ int main()
     }
 
     int a1=meniu();
+    FILE * fPointer;
+    fPointer=fopen("informatii.txt","w");
+
     if(a1==1)
-        cerinta1(muzicieni,n);
+        {cerinta1(muzicieni,n,fPointer);
+         fclose(fPointer);
+        }
     else if(a1==2)
-        cerinta2(albume,m);
+       {cerinta2(albume,m,fPointer);
+          fclose(fPointer);
+       }
     else if(a1==3)
-        cerinta3(albume,m);
+    {
+        cerinta3(albume,m,fPointer);
+        fclose(fPointer);
+    }
     else if(a1==4)
-        afisare_date(muzicieni,n);
+    {
+        afisare_date(muzicieni,n,fPointer);
+        fclose(fPointer);
+    }
 
 
     fclose(inA);
     fclose(inM);
     return 0;
 }
+
