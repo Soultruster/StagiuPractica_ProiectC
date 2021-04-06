@@ -1,7 +1,7 @@
-5010202456837
+1020802030
 Tobi Fernandez
 Romania,Cluj-Napoca,Strada Iasomiei,Nr.25
-0745204036
+0745-204-036
 chitara,vioara
 4034B
 chitara
@@ -9,14 +9,90 @@ Sol
 5015B
 vioara
 Sol
-601/03,639/05
+601/03,639/05,883/07,6042E/02,512/05
 
-5010202476837
+2050105105
 Joan Baez
-Romania,Suecava,Strada Iasomiei,Nr.15
-0745204345
+SUA,New York City -State Island ,Strada Adams 
+202-555-0194
 pian
 4999B
 pian
 Do
-601/03,883/07
+312/03,4072/02,121/04
+
+2050309095
+Bob Dylan
+SUA,Duluth-Minnesota,Strada 5th Ave S, Nr.24
+970-438-1685
+chitara acustica,tobe,chitara bas,harpa,conga,flaut
+1328B
+chitara acustica
+Sol
+1336D
+tobe
+Do
+1452B
+chitara bas
+Sol
+766B
+harpa
+Sol
+1991E
+conga
+Sol
+2101C
+flaut
+Sol
+4071/99,521/00,4089/01
+
+1020304215
+Sophia Eathen
+Germania,Oberdorla,Nr.55A
++49-205-126-1255
+pian,flaut,violoncel,clarinet,tobe
+2525B
+pian
+Sol
+345E
+flaut
+Sol
+563B
+violoncel
+Do
+486E
+clarinet
+Do
+222D
+tobe
+Do
+1583/99,6211/04,6511/05,618/05,1513/07,8513/10,5101/15,6519/15
+
+10501020125
+Miranda Shaffer
+SUA,Wasghington-DC,Strada 5th, Nr.4
+921-163-7349
+xilofon,castaniete
+667B
+xilofon
+La Minor
+842C
+castaniete
+Do
+125E/99,5213/01,6854/03,815/05,513/05,1051/14
+
+6864474573
+David Dragulin
+Romania,Arad,Strada Udreea,Bl.B,Sc.C,Ap.16
+0726-416-282
+chitara electrica,chitara bas,tobe
+9095B
+chitara electrica
+Sol
+667B
+chitara bas
+Do
+615D
+tobe
+Do
+6042E/02,512/05,619/05,5521/00,1778B/13
