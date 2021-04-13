@@ -33,7 +33,7 @@ struct muzician
 int meniu(){
      int alegere;
      printf("Selectati ce doriti sa afiseze programul :\n");
-     printf("1 : Albumele scoase de un anumit muzician\n2 : Numarul albumelor aparute intr-un anumit an\n3 : Albumele inregistrate pe un anumit format\n4 : Toate datele\n");
+     printf("1 : Albumele scoase de un anumit muzician\n2 : Numarul albumelor aparute intr-un anumit an\n3 : Albumele inregistrate pe un anumit format\n4 : Toate datele\n5 : Toate albumele inregistrate (ordine cronologica)\n6 : Instrumentele folosite pentru un album\n");
      scanf("%d",&alegere);
      printf("\n");
      return alegere;
@@ -82,7 +82,61 @@ void cerinta3(struct album albume[],int m,FILE *p){
     if(nr==0)
         printf("Ne pare rau ,nu exista albume inregistrate pe acest format\n");
 }
+void cerinta5(struct album albume[],int m,FILE *p){
+    int ok=0,sw=0;
+    struct album aux;
+    do{
+            ok=0;
+        for(int i=1;i<m;i++){
+            sw=0;
+            if(albume[i].data[8]>albume[i+1].data[8])
+                sw=1;
+            else   if(albume[i].data[8]==albume[i+1].data[8] )
+                if(albume[i].data[9]>albume[i+1].data[9])
+                    sw=1;
+                else if(albume[i].data[9]==albume[i+1].data[9])
+                    if(albume[i].data[3]>albume[i+1].data[3])
+                        sw=1;
+                    else if(albume[i].data[3]==albume[i+1].data[3])
+                        if(albume[i].data[4]>albume[i+1].data[4])
+                            sw=1;
+                        else if(albume[i].data[4]==albume[i+1].data[4])
+                            if(albume[i].data[0]>albume[i+1].data[0])
+                                sw=1;
+                            else if(albume[i].data[0]==albume[i+1].data[0])
+                                if(albume[i].data[1]>albume[i+1].data[1])
+                                    sw=1;
+            if(sw==1){
+                aux=albume[i];
+                albume[i]=albume[i+1];
+                albume[i+1]=aux;
+                ok=1;
+            }
+        }
+    }while(ok!=0);
 
+    for(int i=1;i<=m;i++)
+        fprintf(p,"%s\n",albume[i].titlu);
+
+}
+void cerinta6(struct muzician muzicieni[],int n,struct album albume[],int m,FILE *p)
+{
+    printf("Alegeti un album:\n");
+    int al;
+    char cod[100];
+    for(int i=1;i<=m;i++)
+        printf("%d.%s",i,albume[i].titlu);
+    scanf("%d",&al);
+    strcpy(cod,albume[al].codAlbum);
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=muzicieni[i].numarAlbume;j++)
+            if(strncmp(muzicieni[i].albm[j].codAlbum,cod,6)==0)
+                for(int k=1;k<=muzicieni[i].numarInstrumente;k++)
+                    fprintf(p,"%s",muzicieni[i].instr[k].nume);
+    }
+
+}
 void afisare_date(struct muzician muzicieni[],int n,FILE *p)
 {
     printf("\n\n\n");
@@ -230,10 +284,19 @@ int main()
         afisare_date(muzicieni,n,fPointer);
         fclose(fPointer);
     }
+    else if(a1==5)
+    {
+        cerinta5(albume,m,fPointer);
+        fclose(fPointer);
+    }
+    else if(a1==6)
+    {
+        cerinta6(muzicieni,n,albume,m,fPointer);
+        fclose(fPointer);
+    }
 
 
     fclose(inA);
     fclose(inM);
     return 0;
 }
-
